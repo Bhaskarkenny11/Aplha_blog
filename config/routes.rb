@@ -7,4 +7,5 @@ Rails.application.routes.draw do
    #get 'about', to: 'articles#about'
    get 'articles', to: 'articles#index', as: 'articles'
    get 'about', to: 'articles#about', as: 'about'
-end
+   resources :articles, only:[:show]
+  end
