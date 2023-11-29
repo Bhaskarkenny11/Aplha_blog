@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
     end
     def show
         #binding.pry
-        @articles=Article.find(params[:id])
+        @article=Article.find(params[:id])
     end
 
     def index
@@ -12,15 +12,20 @@ class ArticlesController < ApplicationController
     end
 
     def new 
-
+      
     end
 
     def create 
   
    @article= Article.new(params.require(:article).permit(:title,:description))
-    render plain: @article.inspect
-end
+     @article.save
+     redirect_to @article
+    
+    end
 
+def article_params
+    params.require(:article).permit(:title, :description)
+  end
 
 
 
