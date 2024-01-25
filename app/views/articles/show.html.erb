@@ -1,3 +1,6 @@
 <h1>showing articles details</h1>
-<p><strong>Title:<%=@article.title%></strong></p>
-<p>Description:<%=@article.description%></p>
+<p><strong>Title:<%= @article.title %></strong></p>
+<p>Description:<%= @article.description %></p>
+<%= link_to "edit", edit_article_path(@article) %>  |
+<%= link_to "Delete", article_path(@article), data: { turbo_method: :delete, turbo_confirm: "are you sure" } %>|
+ <%= link_to "artilces", (articles_path) %>
