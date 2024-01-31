@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   #resources :articles
   #get 'about', to: 'articles#about'
   get "articles", to: "articles#index", as: "articles"
-  get "about", to: "articles#about", as: "about"
+  get "home", to: "articles#home", as: "home"
   resources :articles, only: [:show, :index, :new, :create, :edit, :destroy, :update]
 end
