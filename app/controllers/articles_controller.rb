@@ -5,7 +5,6 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    #binding.pry
   end
 
   def index
