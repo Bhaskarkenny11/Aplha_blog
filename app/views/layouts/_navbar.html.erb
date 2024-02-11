@@ -8,11 +8,13 @@
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+        <li><%= link_to "VIEW ARTICLES", articles_path, class: "nav-link " %></li>
+      <!--  nav-link  btn btn-outline-success -->
+        
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Articles
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ARTICLES
           </a>
           <ul class="dropdown-menu">
           
@@ -23,7 +25,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Link</a>
+        <li><%= link_to "NEW ARTICLE", new_article_path, class: " nav-link  btn btn-outline-success" %></li>
         </li>
       </ul>
       <form class="d-flex" role="search">
