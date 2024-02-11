@@ -41,3 +41,8 @@
   #sticky-footer {
     flex-shrink: none;
   }
+  
+  .card-body .card-text {
+    text-align: left;
+}
+// bootstarp textalign class text-left  was not working so wrote custom css 

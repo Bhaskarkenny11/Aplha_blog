@@ -1,6 +1,33 @@
-<h1>showing articles details</h1>
-<p><strong>Title:<%= @article.title %></strong></p>
-<p>Description:<%= @article.description %></p>
-<%= link_to "edit", edit_article_path(@article) %>  |
-<%= link_to "Delete", article_path(@article), data: { turbo_method: :delete, turbo_confirm: "are you sure" } %>|
- <%= link_to "artilces", (articles_path) %>
+
+<div id="page-content"> 
+        <h1 class="text-center mt-4"><%= @article.title %> </h1>
+        <div class="container">          
+                    <div class="row justify-content-md-center"> 
+                        <div class="col-8 mt-4"> 
+                            <div class="card text-center shadow-lg  mb-5 bg-body-tertiary rounded">
+                                <div class="card-header fst-italic">
+                                            By Bhaskar Yerrolla
+                                </div>
+                                <div class="card-body"> 
+                                                <div class="card-text"> <%= simple_format (@article.description) %> </div>
+                                               <%= link_to "EDIT", edit_article_path(@article), class: "btn btn-warning" %>
+                                                <%= link_to "DELETE", article_path(@article), data: { turbo_method: :delete, turbo_confirm: "are you sure" }, class: "btn btn-danger" %>
+                                </div>
+                                <div class="card-footer text-body-secondary">
+                                <small> created <%= time_ago_in_words(@article.created_at) %> ago 
+                                        edited at <%= time_ago_in_words(@article.updated_at) %> 
+                                </small>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </div> 
+    </div>
+
+
+    
+
+
+
+
+
