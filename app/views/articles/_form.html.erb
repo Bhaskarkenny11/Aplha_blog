@@ -6,15 +6,16 @@
 <div class='row justify-content-center'>
  <div class='col-10'>
  <%= render "shared/errors" %>
- <%= form_with(model: @article, class: "shadow-lg p-3 mb-3 bg-info rounded ", local: true) do |f| %>
+ <%= form_with(model: @article, class: "shadow-lg p-3 mb-3 bg-light-yellow rounded ", local: true) do |f| %>
 
         <div class="form-group row">
             
-            <%= f.label :TITLE, class: "col-2 col-form-label " %>
+            <%= f.label :TITLE, class: "col-2 col-form-label  " %>
                 <div class="col-10">
                 <%= f.text_field :title, class: "form-control shadow rounded" %>
                 </div>
             </div>
+            <br>
 
             <div class="form-group row">
 
@@ -23,8 +24,9 @@
                     <%= f.text_area :description, rows: 10, class: "form-control shadow rounded" %>
                     </div>
             </div>
+            <br>
             <div class="form-group row justify-content-center">
-            <%= f.submit class: "btn btn-outline-light btn-lg mx-auto d-block", style: "width: 30%;" %>
+            <%= f.submit class: "btn btn-outline-secondary btn-lg mx-auto d-block", style: "width: 30%;" %>
             </div>
         <% end %>
    </div> 
