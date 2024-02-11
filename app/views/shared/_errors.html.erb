@@ -1,8 +1,18 @@
 <% if @article.errors.any? %>
- <h2> the following errors prevented to save</h2>
-    <ul>
-        <% @article.errors.full_messages.each do |error| %>
-        <li> <%= error %> </li>
-        <% end %>
-    </ul>
- <% end %> 
+
+<div class="alert alert-danger   alert-dismissible fade show"  role="alert">
+    <h3> the following errors prevented to save</h2>
+    <hr>
+        <ul>
+            <% @article.errors.full_messages.each do |error| %>
+            <li> <%= error %> </li>
+            <% end %>
+        </ul>
+
+</div>
+
+    <% end %> 
+
+    
+ 
+ 
