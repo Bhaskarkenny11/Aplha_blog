@@ -6,7 +6,7 @@
                         <div class="col-8 mt-4"> 
                             <div class="card text-center shadow-lg  mb-5 bg-body-tertiary rounded">
                                 <div class="card-header fst-italic">
-                                            By Bhaskar Yerrolla
+                                  By <%= @article.user.username if @article.user%>
                                 </div>
                                 <div class="card-body"> 
                                                 <div class="card-text"> <%= simple_format (@article.description) %> </div>
