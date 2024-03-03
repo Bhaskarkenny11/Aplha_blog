@@ -11,7 +11,7 @@ gem "sprockets-rails"
 gem "byebug"
 gem "pry"
 gem "bootstrap", "~> 5.0.2"
-
+gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
