@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get "articles", to: "articles#index", as: "articles"
   get "home", to: "articles#home", as: "home"
   resources :articles
+  get "signup", to: "users#new"
 end
