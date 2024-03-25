@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get "home", to: "articles#home", as: "home"
   resources :articles
   get "signup", to: "users#new"
+  resources :users,except: [:new]
 end
