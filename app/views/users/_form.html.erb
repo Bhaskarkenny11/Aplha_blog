@@ -1,0 +1,44 @@
+<style>
+.btn-btn 
+</style>
+<div class="container">
+
+<div class='row justify-content-center'>
+ <div class='col-10'>
+ <%= render "shared/errors", obj:@user %>
+ <%= form_with(model: @user, class: "shadow-lg p-3 mb-3 bg-light-yellow rounded ", local: true) do |f| %>
+
+            <div class="form-group row">
+            
+                <%= f.label :username, class: "col-2 col-form-label  " %>
+                    <div class="col-10">
+                        <%= f.text_field :username, class: "form-control shadow rounded",placeholder:"Enter username" %>
+                    </div>
+            </div>
+            <br>
+
+            <div class="form-group row">
+                <%= f.label :email, class: "col-2 col-form-label" %>
+                    <div class="col-10 trix-content">
+                    <%= f.email_field :email, rows: 10, class: "form-control shadow rounded",placeholder:"Enter your e-mail" %>
+                    </div>
+            </div>
+
+            <div class="form-group row">
+
+            <%= f.label :password, class: "col-2 col-form-label" %>
+                <div class="col-10 trix-content">
+                <%= f.password_field :password, rows: 10, class: "form-control shadow rounded",placeholder:"Enter your password" %>
+                </div>
+        </div>
+            <br>
+            <div class="form-group row justify-content-center">
+            <%= f.submit class: "btn btn-outline-secondary btn-lg mx-auto d-block", style: "width: 30%;" %>
+            </div>
+        <% end %>
+   </div> 
+   <br>
+   <%= link_to "Cancel and Return to Articles", articles_path, class: "btn btn-outline-light mx-auto d-block", style: "width: 40%;" %>
+
+</div>
+ </div>
