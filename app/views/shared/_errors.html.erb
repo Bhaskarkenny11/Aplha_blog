@@ -1,7 +1,7 @@
 <% if obj.errors.any? %>
 
 <div class="alert alert-danger   alert-dismissible fade show"  role="alert">
-    <h3> the following errors prevented to save</h2>
+    <h3> the following errors prevented <%= obj.class %> to save</h2>
     <hr>
         <ul>
             <% obj.errors.full_messages.each do |error| %>

@@ -7,11 +7,11 @@ class UsersController < ApplicationController
     def create
      #binding.pry
      @user=User.new(user_params)
-     binding.pry
+     #binding.pry
         if @user.save 
-            binding.pry
-            flash[:notice]= "user Successfully created"
-            redirect_to :articles_path
+           # binding.pry
+            flash[:notice]= "#{@user.username} Successfully created"
+            redirect_to articles_path
         else
             render 'new'
         end
