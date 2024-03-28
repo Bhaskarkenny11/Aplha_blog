@@ -47,7 +47,6 @@ class ArticlesController < ApplicationController
       render "destroy"
     end
   end
-
   private
 
   def article_params
